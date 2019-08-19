@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
 	vim \
 	xz-utils \
 	tzdata \
-	less
+	less \
+	&& apt-get clean
 
 # Timezone Asia/Tokyo
 RUN echo "Asia/Tokyo" > /etc/timezone && \
